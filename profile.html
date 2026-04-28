@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefany Martínez</title>
+    <link rel="icon" sizes="32x32" href="icon/cropped-logonuevo-32x32.png"> 
+    <link rel="icon" sizes="192x192" href="icon/cropped-logonuevo-192x192.png"> 
+
+    <link rel="stylesheet" href="css/_theme.css">
+
+    <style>
+
+        .contenido{
+            display:flex;
+            align-items: center;
+            padding-right: 20px;
+            gap: 30px;
+            background-color: var(--white);
+            border: 1px solid var(--grey-100);
+            box-shadow: 5px 5px 15px var(--grey-200);
+            overflow: hidden;
+        }
+    
+        .imagen{
+            width: 300px;
+            height: 100%;
+            border-bottom-right-radius: 50px;
+            padding-right: 5px;
+        }
+
+        .contenido-texto{
+            flex:1;
+            font-family: var(--primary-font);
+        }
+
+        h1{
+            color: var(--main-color);
+        }
+
+        #contenido-imagen{
+            background-color: var(--main-color);
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        #bio{
+            font-style: italic;
+        }
+
+        .texto-principal {
+            color: var(--black);
+        }
+        
+        a{
+            color: var(--main-color);
+        }
+
+        a:active {
+            color: var(--accent-color);
+        }
+
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <section>
+        <div class="contenido">
+            <div id="contenido-imagen">
+                <img src="27377595.jpg" class="imagen">
+            </div>
+            <div class="contenido-texto">
+                <h1>Stefany Martínez</h1>
+                
+                <p id="bio" class="texto-principal">Soy estudiante de Computación en la Universidad Central de Venezuela (UCV) actualmente 
+                    cursando el octavo semestre de la carrera. He tenido el privilegio de trabajar en el área
+                    y ando cada día enfocada más en perfeccionar mis técnicas de programación.
+                </p>
+                
+                <table class="texto-principal">
+                <tr><td>Mi color favorito es:</td><td>Morado</td></tr>
+                <tr><td>Mi libro favorito es:</td><td>No tengo</td></tr>
+                <tr><td>Mi género musical favorito es: </td><td>Pop</td></tr>
+                <tr><td>Mi videojuego favorito es:</td><td>Baldur's Gate 3</td></tr>
+                <tr><td><strong>Lenguajes aprendidos:</strong></td><td><strong>C/C++, Java, Python, JavaScript, Angular</strong></td></tr>
+                </table>
+                
+                <p class="texto-principal">Si necesitan comunicarse conmigo me pueden escribir a: <br>
+                <a href=""><strong>tefymartinez99@gmail.com</strong></a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
+</body>
+</html>
