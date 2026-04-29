@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html{
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+.body {
+    background-color: var(--grey-50);
+    font-family: var(--primary-font);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: var(--main-color);
+    padding: 15px 50px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white);
+}
+
+.UCV {
+    font-size: 1rem; 
+    vertical-align: middle;
+}
+
+.logo h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: var(--flex-font);
+}
+
+.logo span {
+    font-size: 1.1rem;
+    vertical-align: middle;
+    font-weight: normal;
+    font-family: var(--primary-font);
+}
+
+.busqueda form {
+    display: flex;
+}
+        
+.busqueda input {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 12px 0 0 12px;
+    width: 250px;
+}
+
+.busqueda button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 0 12px 12px 0;
+    cursor: pointer;
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    padding: 7px;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.titulo {
+    font-size: 1.8rem;
+    color: var(--grey-800);
+    margin-bottom: 30px;
+}
+
+.estudiantes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    border-bottom: 8px solid var(--main-color); 
+}
+
+.card-image {
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    background-color: var(--white);
+    padding: 15px;
+}
+
+.card-info p {
+    color: var(--grey-800);
+    font-size: 1rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--grey-200);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--grey-200);
+    margin-top: 50px;
+    font-family: var(--primary-font);
+}
+
+.contenido{
+    display:flex;
+    align-items: center;
+    padding-right: 20px;
+    gap: 30px;
+    background-color: var(--white);
+    border: 1px solid var(--grey-100);
+    box-shadow: 5px 5px 15px var(--grey-200);
+    overflow: hidden;
+}
+    
+.imagen{
+    width: 300px;
+    height: 100%;
+    border-bottom-right-radius: 50px;
+    padding-right: 5px;
+}
+
+.contenido-texto{
+    flex:1;
+    font-family: var(--primary-font);
+}
+
+.nombre{
+    margin-top: 20px;
+    color: var(--main-color);
+}
+
+#contenido-imagen{
+    background-color: var(--main-color);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+#bio{
+    font-style: italic;
+}
+
+.texto-principal {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+        
+a{
+    color: var(--main-color);
+}
+
+a:active {
+    color: var(--accent-color);
+}

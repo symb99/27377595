@@ -9,62 +9,27 @@
 
     <link rel="stylesheet" href="css/_theme.css">
 
-    <style>
-
-        .contenido{
-            display:flex;
-            align-items: center;
-            padding-right: 20px;
-            gap: 30px;
-            background-color: var(--white);
-            border: 1px solid var(--grey-100);
-            box-shadow: 5px 5px 15px var(--grey-200);
-            overflow: hidden;
-        }
-    
-        .imagen{
-            width: 300px;
-            height: 100%;
-            border-bottom-right-radius: 50px;
-            padding-right: 5px;
-        }
-
-        .contenido-texto{
-            flex:1;
-            font-family: var(--primary-font);
-        }
-
-        h1{
-            color: var(--main-color);
-        }
-
-        #contenido-imagen{
-            background-color: var(--main-color);
-            position: relative;
-            display: flex;
-            align-items: flex-end;
-        }
-
-        #bio{
-            font-style: italic;
-        }
-
-        .texto-principal {
-            color: var(--black);
-        }
-        
-        a{
-            color: var(--main-color);
-        }
-
-        a:active {
-            color: var(--accent-color);
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header></header>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-item logo">
+                <h1>ATI<span class="UCV">[UCV]</span>Log</h1>
+            </div>
+
+            <div class="nav-item busqueda">
+                <form action="#">
+                    <input type="text" placeholder="Nombre..." name="search">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+
+            <div class="nav-item user-icon">
+                <img src="icon/userIcon.svg" alt="Usuario" width="32" height="32">
+            </div>
+        </nav>
+    </header>
 
     <section>
         <div class="contenido">
@@ -72,7 +37,7 @@
                 <img src="27377595.jpg" class="imagen">
             </div>
             <div class="contenido-texto">
-                <h1>Stefany Martínez</h1>
+                <h1 class="nombre">Stefany Martínez</h1>
                 
                 <p id="bio" class="texto-principal">Soy estudiante de Computación en la Universidad Central de Venezuela (UCV) actualmente 
                     cursando el octavo semestre de la carrera. He tenido el privilegio de trabajar en el área
@@ -94,6 +59,8 @@
         </div>
     </section>
 
-    <footer></footer>
+    <footer class="footer">
+        <p>Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
