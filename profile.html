@@ -11,9 +11,11 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link rel="preload" href="conf/configES.json" as="fetch" crossorigin>
+    <script src="conf/configES.json"></script>
 
-    <script src="js/index.js" defer></script>
+    <script src="data/index.json"></script> 
+    
+    <script src="js/profile.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -51,15 +53,30 @@
                 </p>
                 
                 <table class="texto-principal">
-                <tr><td>Mi color favorito es:</td><td></td></tr>
-                <tr><td>Mi libro favorito es:</td><td></td></tr>
-                <tr><td>Mi género musical favorito es: </td><td></td></tr>
-                <tr><td>Mi videojuego favorito es:</td><td></td></tr>
-                <tr><td><strong>Lenguajes aprendidos:</strong></td><td><strong></strong></td></tr>
+                    <tr>
+                        <td class="label"></td>
+                        <td class="value"></td>
+                    </tr>
+                    <tr>
+                        <td class="label"></td>
+                        <td class="value"></td>
+                    </tr>
+                    <tr>
+                        <td class="label"></td>
+                        <td class="value"></td>
+                    </tr>
+                    <tr>
+                        <td class="label"></td>
+                        <td class="value"></td>
+                    </tr>
+                    <tr>
+                        <td><strong></strong></td>
+                        <td><strong></strong></td>
+                    </tr>
                 </table>
                 
-                <p class="texto-principal">Si necesitan comunicarse conmigo me pueden escribir a: <br>
-                <a class="correo" href=""><strong></strong></a>
+                <p class="texto-principal" id="contacto">
+                    <a class="correo" href=""><strong></strong></a>
                 </p>
             </div>
         </div>
