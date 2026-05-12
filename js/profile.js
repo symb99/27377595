@@ -1,7 +1,7 @@
 function logo(dato) {
-    const logoH1 = document.querySelector('.logo h1');
-    if (logoH1 && dato.site) {
-        logoH1.innerHTML = ''; 
+    const h1 = document.querySelector('.logo h1');
+    if (h1 && dato.site) {
+        h1.innerHTML = ''; 
         
         const ati = document.createTextNode(dato.site[0]);
         
@@ -11,9 +11,9 @@ function logo(dato) {
         
         const log = document.createTextNode(dato.site[2]);
         
-        logoH1.appendChild(ati);
-        logoH1.appendChild(ucv);
-        logoH1.appendChild(log);
+        h1.appendChild(ati);
+        h1.appendChild(ucv);
+        h1.appendChild(log);
     }
 
     const busqueda = document.querySelector('.busqueda button');
@@ -29,13 +29,22 @@ function logo(dato) {
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
 
-   const lang = urlParams.get('lang') || 'ES'; 
+    const lang = urlParams.get('lang') || 'ES'; 
 
     const idioma = document.createElement('script');
     idioma.src = `conf/config${lang.toUpperCase()}.json`;
     document.head.appendChild(idioma);
     
     logo(config);
+
+    const formulario = document.querySelector('.busqueda form');
+    if (formulario) {
+        const inputLang = document.createElement('input');
+        inputLang.type = 'hidden';
+        inputLang.name = 'lang';
+        inputLang.value = lang; 
+        formulario .appendChild(inputLang);
+    }
 
     const ciEstudiante = urlParams.get('ci');
 
@@ -45,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     perfil.onload = () => {
         llenarDatos(profile, config);     
     };
-
+    
     document.head.appendChild(perfil);
 });
 

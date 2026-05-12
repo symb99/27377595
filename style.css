@@ -568,3 +568,18 @@ html{
         font-weight: bold;
     }
 }
+
+.mensaje-error {
+    color: var(--accent-color); 
+    font-family: var(--primary-font); 
+    font-size: 16px;
+    margin-top: 20px;
+    grid-column: 1 / -1; 
+    text-align: left; 
+    text-align: center;
+}
+
+.mensaje-error strong {
+    font-weight: bold;
+    color: var(--accent-color); 
+}
