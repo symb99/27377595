@@ -212,6 +212,20 @@ html{
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header {
+        padding: 8px 15px; 
+    }
+
+    .logo {
+        order: 1;
+    }
 
     .logo h1 {
         font-size: 1.8rem; 
@@ -220,27 +234,73 @@ html{
     .logo span {
         font-size: 0.8rem; 
     }
-
-    .header {
-        padding: 8px 15px; 
-    }
    
+    .menu-icon {
+        display: block;
+        order: 2;
+        cursor: pointer;
+    }
 
-    .navbar {
-        flex-direction: row;
-        justify-content: space-between;
+    #linea-arriba {
+        order: 3;
     }
 
     .busqueda {
-        display: none; 
-    }
-
-    .menu-icon {
-        display: block; 
-    }
-
-    .user-icon{
         display: none;
+        width: 100%;
+        margin-top: 15px;
+        order: 4; 
+    }
+
+    #linea-abajo {
+        order: 5;
+    }
+
+    .user-icon-container {
+        display: none;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 12px;
+        margin-top: 15px;
+        order: 6; 
+    }
+
+    .linea-menu {
+        display: none;
+        width: 100%;
+        border: 0;
+        border-top: 1px solid var(--white);
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .texto-perfil {
+        color: var(--white);
+        font-family: var(--primary-font);
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .user-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--accent-color);
+        border-radius: 50%;
+        padding: 7px;
+    }
+
+    .header.open .busqueda {
+        display: block;
+    }
+
+    .header.open .linea-menu {
+        display: block;
+    }
+
+    .header.open .user-icon-container {
+        display: flex;
     }
 
     .contenido {
@@ -329,28 +389,96 @@ html{
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    .logo h1 {
-        font-size: 2.2rem; 
-    }
-
-    .logo span {
-        font-size: 0.9rem;
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .header {
         padding: 12px 20px;
     }
 
-    .busqueda{
-        display: none;
+    .logo h1 {
+        font-size: 2.2rem;
+    }
+
+    .logo span {
+        font-size: 0.9rem;
+    }
+
+
+    .logo {
+        order: 1;
     }
 
     .menu-icon {
         display: block; 
+        order: 2;
     }
 
-    .user-icon{
+    #linea-arriba {
+        order: 3;
+    }
+
+    .busqueda {
         display: none;
+        width: 100%;
+        margin-top: 15px;
+        order: 4;
+    }
+
+    #linea-abajo {
+        order: 5;
+    }
+
+    .user-icon-container {
+        display: none;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 12px;
+        margin-top: 15px;
+        order: 6;
+    }
+
+    .linea-menu {
+        display: none;
+        width: 100%;
+        border: 0;
+        border-top: 1px solid var(--white);
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .texto-perfil {
+        color: var(--white);
+        font-family: var(--primary-font);
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .user-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--accent-color);
+        border-radius: 50%;
+        padding: 7px;
+    }
+
+    .header.open .busqueda {
+        display: block;
+    }
+
+    .header.open #linea-arriba,
+    .header.open #linea-abajo {
+        display: block;
+    }
+
+    .header.open .user-icon-container {
+        display: flex;
     }
 
     .contenido {
@@ -383,12 +511,11 @@ html{
         padding: 3px 0;
     }
 
-    .header {
-        padding: 12px 20px;
-    }
-
-    .logo h1 {
-        font-size: 2.2rem;
+    .titulo {
+        font-size: 1.8rem; 
+        text-align: left; 
+        margin-left: 18px; 
+        margin-bottom: 25px;
     }
 
     .estudiantes {
@@ -424,13 +551,6 @@ html{
         font-size: 0.95rem;
         font-weight: 500;
         text-align: left;
-    }
-
-    .titulo {
-        font-size: 1.8rem; 
-        text-align: left; 
-        margin-left: 18px; 
-        margin-bottom: 25px;
     }
 }
 
@@ -508,6 +628,35 @@ html{
         max-width: 180px;
     }
 
+    .linea-menu {
+        display: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .linea-menu {
+        display: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .texto-perfil, 
+    #text-mi-perfil {
+        display: none;
+    }
+
+    .user-icon-container {
+        display: flex;
+        width: auto;
+        margin-top: 0;
+    }
+
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
@@ -566,6 +715,57 @@ html{
     .card-info p {
         font-size: 1.1rem;
         font-weight: bold;
+    }
+
+    .linea-menu {
+        display: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .linea-menu {
+        display: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .texto-perfil, 
+    #text-mi-perfil {
+        display: none;
+    }
+
+    .user-icon-container {
+        display: flex;
+        width: auto;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .linea-menu {
+        display: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .texto-perfil, 
+    #text-mi-perfil {
+        display: none;
+    }
+
+    .user-icon-container {
+        display: flex;
+        width: auto;
+        margin-top: 0;
     }
 }
 

@@ -114,4 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
         );
         cargarEstudiantes(resultados);
     });
+
+    const menu = document.querySelector('.menu-icon');
+    const header = document.querySelector('.header');
+
+    if (menu && header) {
+        menu.addEventListener('click', () => {
+            header.classList.toggle('open');
+        });
+    }
 });
