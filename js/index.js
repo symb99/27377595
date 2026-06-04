@@ -1,3 +1,5 @@
+console.log("Este es ambito global", this)
+
 function logo(dato) {
     const h1 = document.querySelector('.logo h1');
     if (h1 && dato.site) {
@@ -39,9 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
     
     logo(config);
 
-
     const busqueda = document.querySelector('.busqueda input');
     const section = document.querySelector('.estudiantes');
+
+
+    function debounce(fn, delay) {
+        let timeoutId;
+        return function (...args) {
+            if (timeoutId) clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                fn(...args);
+            }, delay);
+        };
+    }
 
     const cargarEstudiantes = (filtrado) => {
         section.innerHTML = '';
@@ -83,37 +95,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    busqueda.addEventListener('input', (e) => {
+    busqueda.addEventListener('input', debounce((e) => {
         const textoBusqueda = e.target.value.toLowerCase();
-
         const resultados = profiles.filter(estudiante => 
             estudiante.name.toLowerCase().includes(textoBusqueda)
         );
-
         cargarEstudiantes(resultados);
-    });
-
-    cargarEstudiantes(profiles);
+    }, 300)); 
 
     if (busquedasHechas) {
         busqueda.value = busquedasHechas;
-        
         const resultados = profiles.filter(estudiante => 
             estudiante.name.toLowerCase().includes(busquedasHechas.toLowerCase())
         );
-        
         cargarEstudiantes(resultados);
     } else {
         cargarEstudiantes(profiles);
     }
-
-    busqueda.addEventListener('input', (e) => {
-        const texto = e.target.value.toLowerCase();
-        const resultados = profiles.filter(estudiante => 
-            estudiante.name.toLowerCase().includes(texto)
-        );
-        cargarEstudiantes(resultados);
-    });
 
     const menu = document.querySelector('.menu-icon');
     const header = document.querySelector('.header');
@@ -123,4 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.toggle('open');
         });
     }
+
+    mostrarThis();
+    objeto.mostrarNombre();
 });
+
+function mostrarThis() {
+    "use strict"; 
+    console.log("En la función normal:", this); 
+}
+
+const objeto = {
+    nombre: "Stef",
+    mostrarNombre: function() {
+    console.log("En el método de un objeto:", this.nombre); 
+    }
+};
