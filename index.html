@@ -6,23 +6,15 @@
     <title>ATI[UCV]Log 2026-1</title>
     <link rel="icon" sizes="32x32" href="icon/cropped-logonuevo-32x32.png"> 
     <link rel="icon" sizes="192x192" href="icon/cropped-logonuevo-192x192.png"> 
-
     <link rel="stylesheet" href="css/_theme.css">
-
     <link rel="stylesheet" href="style.css">
-
-    <script src="conf/configES.json"></script>
-
-    <script src="data/index.json"></script>
-
-    <script src="js/index.js" defer></script>
-    
+    <script src="js/spa.js" defer></script>
 </head>
 <body class="body">
     <header class="header">
         <nav class="navbar">
             <div class="nav-item logo">
-                <a class="link" href="index.html"><h1>ATI<span class="UCV">[UCV]</span>Log</h1></a>
+                <a class="link" id="btn-inicio" href="#"><h1>ATI<span class="UCV">[UCV]</span>Log</h1></a>
             </div>
 
             <div class="nav-item menu-icon">
@@ -32,10 +24,10 @@
             <hr class="linea-menu" id="linea-arriba">
 
             <div class="nav-item busqueda">
-                <form action="#">
-                    <input type="text" placeholder="Nombre..." name="search">
-                    <button type="submit">Buscar</button>
-                </form>
+                <div class="form-buscar">
+                    <input type="text" id="input-buscar" placeholder="Nombre...">
+                    <button type="button" id="btn-buscar">Buscar</button>
+                </div>
             </div>
 
             <hr class="linea-menu" id="linea-abajo">
@@ -49,19 +41,11 @@
         </nav>
     </header>
 
-    <section>
-        <div class="contenedor">
-            <h2 class="titulo">Semestre 2026-1</h2>
-
-            <section class="estudiantes">
-                
-            </section>
-        </div>
-    </section>
+    <main id="spa-content">
+    </main>
 
     <footer class="footer">
         <p>Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados</p>
     </footer>
-    
 </body>
 </html>
